@@ -5,22 +5,25 @@
 				<nav>
 					<ul>
 						<% unless user_signed_in? %>
-							<li><a href="#">Explore</a></li>
-							<li><a href="#">Church Sign In</a></li>
+							<li><%= link_to("Explore", new_user_session_path) %></a></li>
+							<li><%= link_to("Church Sign In", new_church_registration_path) %></a></li>
 							<li><%= link_to("Sign In", new_user_session_path) %></li>
 							<!-- <li><%= link_to("Create A Sermon", new_user_registration_path) %></li> -->
 						<% else %>
 						<!-- <li><a href="#">Dashboard</a></li> -->
-						<li><a href="#">Explore</a></li>
+						<li><%= link_to("Explore", churches_path) %></a></li>
 						<li><%= link_to("Sign Out", destroy_user_session_path, :method => :delete) %></li>
 						<% end %>
 					</ul>
 				</nav>
 			</div>
 			</header>
-			<div class ="wrapper_skinny">	
+			<div class ="wrapper_skinny">
+<% if user_signed_in? %>	
 <h1>Hear a word<br> wherever you are.</h1>
-<%= link_to("Explore", new_user_registration_path, :class => "button button_highlight") %>
+<%= link_to("Explore", churches_path, :class => "button button_highlight") %>
+<% end %>
+<h1>Hear a word<br> wherever you are.</h1>
 
 
 </div>
