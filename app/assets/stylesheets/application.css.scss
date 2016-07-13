@@ -111,13 +111,13 @@ body{
 			}
 			}
 .churches_banner {
-	background-image: url(../images/reading.jpg);
+	background-image: image-url("reading.jpg");
 }
 .sign-in_banner {
-	background-image: url(../images/bg2.jpg);
+	background-image: image-url("bg2.jpg");
 }
 .sign-up_banner {
-	background-image: url(../images/bg.jpg);
+	background-image: image-url("bg.jpg");
 }
 
 .pagination:before, pagination:after {

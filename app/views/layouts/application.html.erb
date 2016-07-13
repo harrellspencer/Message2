@@ -16,7 +16,25 @@
        	<%= notice %>
        </p>
        <% end %>
-
+    <header id="main_header" class = "cf">
+      <div class="wrapper_wide">
+        <%= link_to "Message", root_path,  id: "logo" %>
+        <nav>
+          <ul>
+            <% unless user_signed_in? %>
+              <li><%= link_to("Explore", new_user_session_path) %></a></li>
+              <li><%= link_to("Church Sign In", new_church_registration_path) %></a></li>
+              <li><%= link_to("Sign In", new_user_session_path) %></li>
+              <!-- <li><%= link_to("Create A Sermon", new_user_registration_path) %></li> -->
+            <% else %>
+            <!-- <li><a href="#">Dashboard</a></li> -->
+            <li><%= link_to("Explore", churches_path) %></a></li>
+            <li><%= link_to("Sign Out", destroy_user_session_path, :method => :delete) %></li>
+            <% end %>
+          </ul>
+        </nav>
+      </div>
+      </header>
 <%= yield %>
 
 </body>

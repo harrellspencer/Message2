@@ -4,8 +4,12 @@ Rails.application.routes.draw do
   devise_for :users
 root 'welcome#index'
 
-resources :churches
-	post 'churches/sign_up', to: 'churches#home', as: :churches_sign_in
+resources :churches, only: [:index, :show]
+	# post 'churches/sign_up', to: 'churches#home', as: :churches_sign_in
+
+	# get 'churches/sign_up', to: 'churches#home', as: :churches_sign_in
+
+
 
 
 end

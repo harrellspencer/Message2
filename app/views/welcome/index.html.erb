@@ -1,7 +1,7 @@
 <div id="background">
 		<header class = "cf">
 			<div class="wrapper_wide">
-				<a href="#" id="logo">Message</a>
+				<a href="welcome#index" id="logo">Message</a>
 				<nav>
 					<ul>
 						<% unless user_signed_in? %>
@@ -19,11 +19,12 @@
 			</div>
 			</header>
 			<div class ="wrapper_skinny">
+				<h1>Hear a word<br> wherever you are.</h1>
 <% if user_signed_in? %>	
-<h1>Hear a word<br> wherever you are.</h1>
+
 <%= link_to("Explore", churches_path, :class => "button button_highlight") %>
 <% end %>
-<h1>Hear a word<br> wherever you are.</h1>
+
 
 
 </div>

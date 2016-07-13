@@ -1,0 +1,62 @@
+  <div id="church_show">
+      <div id="show_banner">
+        <div class="wrapper_skinny">
+        <h1><%= @church.title %></h1>
+        <p class="description"> <%= @church.description %></p>
+        <% unless @church.itunes.blank? %>
+        <a href= "<%= @church.itunes %>" class="subscribe_link">iTunes</a>
+        <% end %>
+        <a href="#" class= "subscribe_link">Like</a>
+        <a href="<%= @church.website %>" class= "subscribe_link">Website</a>
+      </div>
+        </div>
+        <div id="breadcrumb">
+          <%= link_to churches_path do %>
+            All Sermons
+            <span>/</span>
+            The Anointed Answer
+          </a>
+        </div>
+        <div id="sermons">
+          <div class ="wrapper_skinny">
+            <ul class="cf">
+              <li class="cf">
+                <div class ="sermon_thumbnail">
+            <a href="sermon.html">
+              <img src="images/anointedanswer1.jpg" alt="Anointed Answer"></a>
+            </div>
+            <div class ="sermon_overview">
+              <h2><a href="sermon.html">How to Live</a></h2>
+              <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempus augue tincidunt tincidunt consequat.</p>
+            </div>
+          </li>
+          <li class="cf">
+                <div class ="sermon_thumbnail">
+            <a href="sermon.html">
+              <img src="images/anointedanswer1.jpg" alt="Anointed Answer"></a>
+            </div>
+            <div class ="sermon_overview">
+              <h2><a href="sermon.html">Sowing Seeds</a></h2>
+              <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempus augue tincidunt tincidunt consequat.</p>
+            </div>
+          </li>
+          <li class="cf">
+                <div class ="sermon_thumbnail">
+            <a href="sermon.html">
+              <img src="images/anointedanswer1.jpg" alt="Anointed Answer"></a>
+            </div>
+            <div class ="sermon_overview">
+              <h2><a href="sermon.html">Jesus is Real</a></h2>
+              <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempus augue tincidunt tincidunt consequat.</p>
+            </div>
+          </li>
+        </ul>
+          </div>
+      </div>
+      <div class= "pagination">
+      <span class="previous_page disabled">Previous</span>
+      <em class="current">1</em>
+      <a href="#">2</a>
+      <a class="next_page" href="#">Next</a>
+    </div>
+    </div>
